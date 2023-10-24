@@ -5,8 +5,3 @@
 ``` bash
 npm run app
 ```
-
-## Test
-``` bash
-npm run test
-```

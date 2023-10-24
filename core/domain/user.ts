@@ -1,4 +1,4 @@
-import { Post } from './post'
+import { Post, PostView } from './post'
 
 export type User = {
     id: number,
@@ -11,4 +11,8 @@ export type User = {
     // только поле name
     company: string,
     posts: Post[]
-} 
+}
+
+export type UserView = Omit<User, "posts"> & {
+    posts: PostView[]
+}

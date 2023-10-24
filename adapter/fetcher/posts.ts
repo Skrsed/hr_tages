@@ -17,9 +17,10 @@ export const fetchPosts =
 
 const deserialize = (postsRes: PostRes[]): Post[] => {
     return postsRes.map(postsRes => {
-        return <Post>{
+        return {
             ...postsRes,
-            title_crop: postsRes.title.slice(0, 20) + '…'
+            title_crop: postsRes.title.slice(0, 20) + '…',
+            comments: []
         }
     })
 }

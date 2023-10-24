@@ -7,3 +7,5 @@ export type Comment = {
     body: string
     postId: Post['id']
 }
+
+export type CommentView = Omit<Comment, 'postId'>

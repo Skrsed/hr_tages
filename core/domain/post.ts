@@ -1,3 +1,4 @@
+import { CommentView } from './comment'
 import { User } from './user'
 
 export type Post = {
@@ -7,4 +8,9 @@ export type Post = {
     title_crop: string
     body: string
     userId: User['id'],
+    comments: Comment[]
+}
+
+export type PostView = Omit<Post, 'userId' | 'comments'> & {
+    comments: CommentView[]
 }

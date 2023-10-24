@@ -26,15 +26,18 @@ const deserialize = (usersRes: UserRes[]): User[] => {
                 street,
                 suite
             },
+            website,
             company: { name: company },
         } = usersRes
 
-        return <User>{
+        return {
             id,
             name,
             email,
             address: [city, street, suite].join(', '),
-            company
+            website: `https://${website}`,
+            company,
+            posts: []
         }
     })
 }
