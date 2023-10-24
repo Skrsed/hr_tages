@@ -8,5 +8,5 @@ export const WriteUsersToConsole = async () => {
 
     const str = JSON.stringify(slicedUsers, undefined, 2)
 
-    console.log(str)
+    console.info(str)
 }
